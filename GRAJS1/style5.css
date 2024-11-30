@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.wrapper{
+    display: flex; /*Układa elementy 1 obok drugiego*/
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+
+
+}
+
+.baner{
+    height: 50px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.board{
+    display: grid; /*Układa w siatke*/
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 10px;
+    border: 2px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.board_item{
+    width: 100px;
+    height: 100px;
+    background-color: lightcyan;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.board_item:hover{
+    background-color: lightblue;
+
+}
+
+.board_item--filled-x{
+    position: relative;
+}
+
+.board_item--filled-x::before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: red;
+
+
+}
+
+.board_item--filled-x::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: red;
+}
+
+.board_item--filled-o::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid blue;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.reset-button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: lightcyan;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.reset-button:hover{
+    background-color: lightblue;
+
+}
+
+/* STRONA POWITALNA ####################################################################################### */
+
+#body1{
+    background-color: lightcyan;
+
+}
+
+
+#gameTile{
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+
+
+
+#nick1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px;
+    width: 300px;
+    font-size: 30px;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    border: 3px solid red;
+
+}
+
+#nick2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 40px;
+    width: 300px;
+    font-size: 30px;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    border: 3px solid blue;
+
+}
+
+#nick1text{
+    position: absolute;
+    left: 30%;
+    top: 47%;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+#nick2text{
+    position: absolute;
+    left: 55%;
+    top: 47%;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+#startButton{
+    position: absolute;
+    left: 45.5%;
+    top: 63%;
+    font-size: 20px;
+    font-weight: 600;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: lightcyan;
+    cursor: pointer;
+    
+
+}
+
+#startButton:hover{
+    background-color: lightblue;
+    transition: all 0.3s linear;
+
+}
+
+.winFields{
+    background-color: lightgreen !important;
+
+}
+
+.score{
+    font-size: 20px;
+    height: 40px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 40px;
+    text-decoration: underline;
+
+
+}
+
+#score1{
+    color: red;
+}
+#score2{
+    color: blue;
+}
